@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCENTIDO - Niche Perfumery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+    body{font-family: 'Montserrat', sans-serif;}
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- TOP OFFER BAR -->
+  <div class="w-full bg-[#c8b08a] text-white text-center py-[11px] text-[10px] tracking-[2px] font-medium">
+    AVAIL FLAT 10% OFF ON YOUR FIRST PURCHASE WITH THE CODE FIRST10
+  </div>
+
+  
+    <!-- Main Header Row -->
+    <div class="max-w-[1600px] mx-auto px-5 md:px-10 h-[75px] md:h-[95px] flex items-center justify-between relative">
+
+      <!-- Left Icon -->
+      <button class="text-[#888] hover:text-black">
+        <i class="fa-solid fa-magnifying-glass text-[15px]"></i>
+      </button>
+
+      <!-- CENTER LOGO - YOUR IMAGE -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <img src="images/Website_Logo_1_370x@2x.avif"h-[32px] md:h-[45px] w-auto object-contain">
+      </div>
+
+      <!-- Right Icons -->
+      <div class="flex items-center gap-5 text-[#888]">
+        <i class="fa-regular fa-user hidden md:block text-[15px] cursor-pointer hover:text-black"></i>
+        <i class="fa-solid fa-bag-shopping text-[15px] cursor-pointer hover:text-black"></i>
+        <i class="fa-regular fa-heart hidden md:block text-[15px] cursor-pointer hover:text-black"></i>
+        <button id="menuBtn" class="md:hidden"><i class="fa-solid fa-bars text-[19px]"></i></button>
+      </div>
+
+    </div>
+
+    <!-- NAV BAR -->
+    <nav class="hidden md:flex justify-center gap-10 h-[45px] items-center bg-white border-t border-gray-50">
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">PERFUMES</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">CANDLES</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">DISCOVERY SETS</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">OILS</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">BRANDS</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">SERVICES</a>
+      <a href="#" class="text-[11px] tracking-[2px] text-[#777] hover:text-black">ABOUT US</a>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-6 space-y-4">
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">PERFUMES</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">CANDLES</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">DISCOVERY SETS</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">OILS</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">BRANDS</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">SERVICES</a>
+      <a href="#" class="block text-[12px] tracking-widest text-gray-600">ABOUT US</a>
+    </div>
+
+  </header>
+
+  
+
+  <script>
+    document.getElementById('menuBtn').onclick = () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
+
+<!-- 4 PHOTO SLIDER - FINAL CORRECT -->
+<link rel="stylesheet" href="https://cdn.tailwindcss.com">
+
+<style>
+ .mySlider{position:relative;width:100%;height:380px;overflow:hidden}
+ .mySlide{position:absolute;inset:0;opacity:0;transition:0.7s}
+ .mySlide.active{opacity:1}
+  @media(min-width:768px){.mySlider{height:520px}}
+</style>
+
+<div class="mySlider">
+
+  <!-- PHOTO 1 - SCENTOLOGIA - video 1st -->
+  <div class="mySlide active">
+    <img src="images/Screenshot 2026-09-21 122707.png"w-full h-full object-cover object-center">
+  </div>
+
+  <!-- PHOTO 2 - ATELIER MATERI - video 2nd -->
+  <div class="mySlide">
+    <img src="images/Screenshot 2026-09-21 122754.png"w-full h-full object-cover object-center">
+  </div>
+
+  <!-- PHOTO 3 - CLIVE CHRISTIAN - video 3rd -->
+  <div class="mySlide">
+    <img src="images/Screenshot 2026-09-21 122817.png"w-full h-full object-cover object-center">
+  </div>
+
+  <!-- PHOTO 4 - MATIERE PREMIERE - first photo -->
+  <div class="mySlide">
+    <img src="images/Screenshot 2026-09-21 141958.png"w-full h-full object-cover object-center">
+  </div>
+
+  <!-- DOTS -->
+  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+    <button class="sdot w-[6px] h-[6px] rounded-full bg-white" onclick="goS(0)"></button>
+    <button class="sdot w-[6px] h-[6px] rounded-full bg-white/50" onclick="goS(1)"></button>
+    <button class="sdot w-[6px] h-[6px] rounded-full bg-white/50" onclick="goS(2)"></button>
+    <button class="sdot w-[6px] h-[6px] rounded-full bg-white/50" onclick="goS(3)"></button>
+  </div>
+
+</div>
+
+
+
+<script>
+let s=0;
+const sl=document.querySelectorAll('.mySlide');
+const dl=document.querySelectorAll('.sdot');
+function goS(n){
+  sl[s].classList.remove('active');
+  dl[s].className='sdot w-[6px] h-[6px] rounded-full bg-white/50';
+  s=(n+sl.length)%sl.length;
+  sl[s].classList.add('active');
+  dl[s].className='sdot w-[6px] h-[6px] rounded-full bg-white';
+}
+setInterval(()=>goS(s+1), 3500);
+</script>
+
+<!-- BEST SELLERS - NINTE PHOTO POLE -->
+<section class="w-full bg-[#fcfaf7] py-12 md:py-16">
+
+  <h2 class="text-center font-serif text-[20px] md:text-[22px] tracking-[4px] text-[#2b2b2b] mb-10" style="font-family:'Cormorant Garamond',serif">
+    BEST SELLERS
+  </h2>
+
+  <div class="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4 md:gap-10">
+
+    <!-- 1 - WHITE AMBER -->
+    <div class="flex flex-col items-center text-center">
+      <div class="h-[200px] md:h-[320px] flex items-center justify-center">
+        <img src="images/white.jpg"h-full w-auto object-contain">
+      </div>
+      <h3 class="mt-6 text-[11px] md:text-[12px] tracking-[1.5px] text-[#333]">WHITE AMBER</h3>
+      <p class="text-[10px] md:text-[11px] tracking-[1px] text-[#777] mt-1">CREED</p>
+      <p class="text-[9px] tracking-[1px] text-[#333] mt-1">New</p>
+      <p class="text-[11px] text-[#222] mt-3">MRP: ₹ 52,400.00</p>
+    </div>
+
+    <!-- 2 - BOUQUET DE LA REINE -->
+    <div class="flex flex-col items-center text-center">
+      <div class="h-[200px] md:h-[320px] flex items-center justify-center">
+        <img src="images/london.webp"h-full w-auto object-contain">
+      </div>
+      <h3 class="mt-6 text-[11px] md:text-[12px] tracking-[1.5px] text-[#333]">BOUQUET DE LA REINE</h3>
+      <p class="text-[10px] md:text-[11px] tracking-[1px] text-[#777] mt-1">FLORIS LONDON</p>
+      <p class="text-[11px] text-[#222] mt-3">MRP: ₹ 11,200.00</p>
+    </div>
+
+    <!-- 3 - DOLCE PASSIONE -->
+    <div class="flex flex-col items-center text-center">
+      <div class="h-[200px] md:h-[320px] flex items-center justify-center">
+        <img src="images/red.webp"h-full w-auto object-contain">
+      </div>
+      <h3 class="mt-6 text-[11px] md:text-[12px] tracking-[1.5px] text-[#333]">DOLCE PASSIONE</h3>
+      <p class="text-[10px] md:text-[11px] tracking-[1px] text-[#777] mt-1">PANTHEON ROMA</p>
+      <p class="text-[11px] text-[#222] mt-3">MRP: ₹ 26,000.00</p>
+    </div>
+
+    <!-- 4 - FRANGIPANI -->
+    <div class="flex flex-col items-center text-center">
+      <div class="h-[200px] md:h-[320px] flex items-center justify-center">
+        <img src="images/jayne4.webp"h-full w-auto object-contain">
+      </div>
+      <h3 class="mt-6 text-[11px] md:text-[12px] tracking-[1.5px] text-[#333]">FRANGIPANI</h3>
+      <p class="text-[10px] md:text-[11px] tracking-[1px] text-[#777] mt-1">ORMONDE JAYNE</p>
+      <p class="text-[11px] text-[#222] mt-3">MRP: ₹ 23,500.00</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="w-full bg-[#fcfaf7] py-12">
+  <h2 class="text-center tracking-[4px] text-[18px] serif">UNLOCK EXCLUSIVE ONLINE BENEFITS</h2>
+
+  <div class="max-w-[1100px] mx-auto mt-10 grid md:grid-cols-3 gap-8 text-center">
+
+    <div class="flex flex-col items-center">
+      <img src="images/gift1.avif"w-[110px] h-[110px] rounded-full object-cover mb-4">
+      <p class="text-[11px] text-[#666]">Add a Special Touch with Gift Wrapping</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <img src="images/shoping.avif"w-[110px] h-[110px] rounded-full object-cover mb-4">
+      <p class="text-[11px] text-[#666]">Enjoy Free Shipping on All Orders</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <img src="images/gift1.avif"w-[110px] h-[110px] rounded-full object-cover mb-4">
+      <p class="text-[11px] text-[#666]">Complimentary Vials with Every Order</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- THE PERFECT BALANCE - NINTE PHOTO POLE EXACT -->
+<section class="w-full bg-white py-12">
+  <h2 class="text-center text-[18px] tracking-[4px] text-[#222] mb-8" style="font-family:'Cormorant Garamond',serif">
+    THE PERFECT BALANCE
+  </h2>
+
+  <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
+
+    <!-- FOR HER CARD -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-[4px] bg-[#fdf8ef]">
+      <img src="images/for her.webp"w-full h-[300px] md:h-[380px] object-cover group-hover:scale-[1.02] transition duration-500">
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+        <span class="text-[10px] tracking-[2px] border border-black/30 px-5 py-2 bg-white/80 backdrop-blur">BUY NOW</span>
+      </div>
+    </div>
+
+    <!-- FOR HIM CARD -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-[4px] bg-[#fdf8ef]">
+      <img src="images/for him.webp"FOR HIM" class="w-full h-[300px] md:h-[380px] object-cover group-hover:scale-[1.02] transition duration-500">
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+        <span class="text-[10px] tracking-[2px] border border-black/30 px-5 py-2 bg-white/80 backdrop-blur">BUY NOW</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="w-full bg-[#fdfaf7] py-12 md:py-16">
+  <h2 class="text-center text-[16px] md:text-[20px] tracking-[3px] text-[#222] mb-10" style="font-family:'Cormorant Garamond',serif">
+    ELEVATE YOUR SCENT JOURNEY
+  </h2>
+
+  <div class="max-w-[1300px] mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 px-6">
+
+    <div class="text-center">
+      <img src="images/1.avif"w-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">IRIS</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+    <div class="text-center">
+      <img src="images/2.avif"-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">OUD</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+    <div class="text-center">
+      <img src="images/3.avif"w-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">SAFFRON</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+    <div class="text-center">
+      <img src="images/4.avif"w-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">ROSE</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+    <div class="text-center">
+      <img src="images/5.avif"w-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">VETIVER</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+    <div class="text-center">
+      <img src="images/ex6.webp"w-full h-[90px] md:h-[130px] object-cover">
+      <p class="mt-3 text-[11px] tracking-[1px]">GRAPEFRUIT</p>
+      <button class="mt-2 text-[8px] tracking-[1px] border border-gray-300 px-3 py-[3px]">EXPLORE</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- A CITRUS ESCAPE - SCENTIDO CLONE -->
+<section class="w-full bg-[#fcfaf8] py-14 md:py-20 font-sans">
+
+  <!-- Title -->
+  <h2 class="text-center text-[#2b2b2b] text-[14px] md:text-[17px] tracking-[4px] font-[300] mb-12 md:mb-16" style="font-family: 'Cormorant Garamond', serif;">
+    A CITRUS ESCAPE
+  </h2>
+
+  <!-- Products Grid -->
+  <div class="max-w-[1450px] mx-auto px-4 md:px-12 grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-12 md:gap-x-10">
+
+    <!-- 1. BERGAMOTTO -->
+    <div class="flex flex-col items-center text-center group cursor-pointer">
+      <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+        <img src="images/a1.webp"
+             alt="BERGAMOTTO DI POSITANO"
+             class="h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+      </div>
+      <div class="mt-5">
+        <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[14px] text-[#222] font-[500] uppercase">BERGAMOTTO DI<br>POSITANO</h3>
+        <p class="text-[9px] md:text-[10px] tracking-[1.5px] text-[#8a8a8a] mt-[6px] uppercase">FLORIS LONDON</p>
+        <p class="text-[10px] md:text-[11px] text-[#222] mt-3 font-[400]">MRP: ₹ 18,300.00</p>
+      </div>
+    </div>
+
+    <!-- 2. 1872 MASCULINE -->
+    <div class="flex flex-col items-center text-center group cursor-pointer">
+      <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-6">
+        <img src="images/a2.webp"
+             alt="1872 MASCULINE"
+             class="h-[75%] w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+      </div>
+      <div class="mt-5">
+        <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[14px] text-[#222] font-[500] uppercase">1872 MASCULINE</h3>
+        <p class="text-[9px] md:text-[10px] tracking-[1.5px] text-[#8a8a8a] mt-[6px] uppercase">CLIVE CHRISTIAN</p>
+        <p class="text-[10px] md:text-[11px] text-[#222] mt-3 font-[400]">from MRP: ₹ 37,800.00</p>
+      </div>
+    </div>
+
+    <!-- 3. NEROLI SAUVAGE -->
+    <div class="flex flex-col items-center text-center group cursor-pointer">
+      <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+        <img src="images/a3.webp"
+             alt="NEROLI SAUVAGE"
+             class="h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+      </div>
+      <div class="mt-5">
+        <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[14px] text-[#222] font-[500] uppercase">NÉROLI SAUVAGE</h3>
+        <p class="text-[9px] md:text-[10px] tracking-[1.5px] text-[#8a8a8a] mt-[6px] uppercase">CREED</p>
+        <p class="text-[10px] md:text-[11px] text-[#222] mt-3 font-[400]">MRP: ₹ 40,500.00</p>
+      </div>
+    </div>
+
+    <!-- 4. ERRAI -->
+    <div class="flex flex-col items-center text-center group cursor-pointer">
+      <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+        <img src="images/a4.webp"
+             alt="ERRAI"
+             class="h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+      </div>
+      <div class="mt-5">
+        <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[14px] text-[#222] font-[500] uppercase">ERRAI</h3>
+        <p class="text-[9px] md:text-[10px] tracking-[1.5px] text-[#8a8a8a] mt-[6px] uppercase">SPIRIT OF KINGS</p>
+        <p class="text-[10px] md:text-[11px] text-[#222] mt-3 font-[400]">MRP: ₹ 17,000.00</p>
+      </div>
+    </div>
+
+    <!-- 5. M01 + MANDARIN -->
+    <div class="flex flex-col items-center text-center group cursor-pointer col-span-2 md:col-span-1">
+      <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+        <img src="images/a5.webp"
+             alt="M01 + MANDARIN"
+             class="h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+      </div>
+      <div class="mt-5">
+        <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[14px] text-[#222] font-[500] uppercase">M01 + MANDARIN</h3>
+        <p class="text-[9px] md:text-[10px] tracking-[1.5px] text-[#8a8a8a] mt-[6px] leading-[13px] uppercase">ESCENTRIC<br>MOLECULES</p>
+        <p class="text-[10px] md:text-[11px] text-[#222] mt-3 font-[400]">MRP: ₹ 19,900.00</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- SECOND ROW - A CITRUS ESCAPE -->
+<div class="max-w-[1450px] mx-auto px-4 md:px-12 mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-12 md:gap-x-10">
+
+  <div class="flex flex-col items-center text-center group cursor-pointer">
+    <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+      <img src="images/a6.webp"h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+    </div>
+    <div class="mt-5">
+      <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] text-[#222] font-[500]">OSMANTHUS</h3>
+      <p class="text-[9px] tracking-[1.5px] text-[#8a8a8a] mt-1">ORMONDE JAYNE</p>
+      <p class="text-[10px] mt-3">MRP: ₹ 23,500.00</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center group cursor-pointer">
+    <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+      <img src="images/a7.webp"h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+    </div>
+    <div class="mt-5">
+      <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] text-[#222] font-[500]">NEROLI ORANGER</h3>
+      <p class="text-[9px] tracking-[1.5px] text-[#8a8a8a] mt-1">MATIERE PREMIERE</p>
+      <p class="text-[10px] mt-3">MRP: ₹ 24,000.00</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center group cursor-pointer">
+    <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+      <img src="images/a8.webp"h-[75%] w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+    </div>
+    <div class="mt-5">
+      <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] text-[#222] font-[500]">ABJAR BOIS</h3>
+      <p class="text-[9px] tracking-[1.5px] text-[#8a8a8a] mt-1">THE SPIRIT OF DUBAI</p>
+      <p class="text-[10px] mt-3">MRP: ₹ 38,000.00</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center group cursor-pointer">
+    <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+      <img src="images/a9.webp"h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+    </div>
+    <div class="mt-5">
+      <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] text-[#222] font-[500]">ASSAM OF INDIA</h3>
+      <p class="text-[9px] tracking-[1.5px] text-[#8a8a8a] mt-1">BERDOUES</p>
+      <p class="text-[10px] mt-3">MRP: ₹ 10,000.00</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center group cursor-pointer col-span-2 md:col-span-1">
+    <div class="w-full h-[190px] md:h-[300px] bg-white flex items-center justify-center p-2">
+      <img src="images/a10.jpg"h-full w-auto object-contain group-hover:scale-[1.03] transition duration-300">
+    </div>
+    <div class="mt-5">
+      <h3 class="text-[10px] md:text-[11px] tracking-[1.2px] leading-[12px] text-[#222] font-[500]">BOIS IMPERIAL - 30ML<br>EXTRAIT</h3>
+      <p class="text-[9px] tracking-[1.5px] text-[#8a8a8a] mt-1 leading-[12px]">ESSENTIAL PARFUMS</p>
+      <p class="text-[10px] mt-3">MRP: ₹ 12,000.00</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- BRANDS SECTION WITH 5 IMAGES -->
+<section class="w-full bg-white py-16 md:py-24">
+
+  <h2 class="text-center text-[20px] md:text-[24px] tracking-[4px] font-light mb-16"
+      style="font-family: 'Cormorant Garamond', serif;">
+    BRANDS
+  </h2>
+
+  <div class="max-w-[1500px] mx-auto px-6 md:px-16 grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-12 items-center">
+
+    <!-- 1. BERDOUES -->
+    <div class="flex justify-center items-center h-[60px]">
+      <img src="images/logo1.webp"h-[18px] md:h-[20px] w-auto object-contain grayscale hover:grayscale-0 transition">
+    </div>
+
+    <!-- 2. CLIVE CHRISTIAN -->
+    <div class="flex justify-center items-center h-[60px]">
+      <img src="images/logo3.webp"h-[28px] md:h-[32px] w-auto object-contain grayscale hover:grayscale-0 transition">
+    </div>
+
+    <!-- 3. CREED -->
+    <div class="flex justify-center items-center h-[60px]">
+      <img src="images/logo4.avif"h-[32px] md:h-[38px] w-auto object-contain grayscale hover:grayscale-0 transition">
+    </div>
+
+    <!-- 4. DUSITA PARIS -->
+    <div class="flex justify-center items-center h-[60px]">
+      <img src="images/logo3.webp"h-[40px] md:h-[48px] w-auto object-contain grayscale hover:grayscale-0 transition">
+    </div>
+
+    <!-- 5. ELECTIMUSS LONDON -->
+    <div class="flex justify-center items-center h-[60px] col-span-2 md:col-span-1">
+      <img src="images/logo last.avif"h-[26px] md:h-[30px] w-auto object-contain grayscale hover:grayscale-0 transition">
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+
+<section class="w-full bg-[#fdfaf7] py-20 text-center">
+  <h2 class="text-[26px] tracking-[4px] font-light" style="font-family:serif">DISCOVER</h2>
+  <p class="text-[11px] text-[#777] mt-2 mb-12">A myriad collections of scents, handpicked from around the world</p>
+
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-10">
+
+    <div>
+      <img src="images/pic1.webp"w-full h-[520px] object-cover rounded-t-[200px]">
+      <h3 class="mt-6 text-[13px] tracking-[3px]">PERFUMES</h3>
+      <a class="text-[10px] tracking-[2px] underline text-[#888]">SHOP NOW</a>
+    </div>
+
+    <div>
+      <img src="images/pic2.webp"w-full h-[520px] object-cover rounded-t-[200px]">
+      <h3 class="mt-6 text-[13px] tracking-[3px]">DISCOVERY SETS</h3>
+      <a class="text-[10px] tracking-[2px] underline text-[#888]">SHOP NOW</a>
+    </div>
+
+    <div>
+      <img src="images/pic3.webp"w-full h-[520px] object-cover rounded-t-[200px]">
+      <h3 class="mt-6 text-[13px] tracking-[3px]">CANDLES</h3>
+      <a class="text-[10px] tracking-[2px] underline text-[#888]">SHOP NOW</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section style="background:#f9f8f6; padding:80px 40px; display:flex; flex-wrap:wrap; align-items:center; gap:50px; max-width:1600px; margin:auto;">
+
+  <div style="flex:1; min-width:300px; text-align:center;">
+    <h2 style="font-family:serif; letter-spacing:4px; font-weight:300; font-size:24px; margin-bottom:20px;">IN FOCUS</h2>
+    <p style="font-size:12.5px; line-height:24px; color:#000000; max-width:500px; margin:auto;">
+       Founded by Luca Gritti, Gritti channels Venetian heritage into bold, modern fragrances. Inspired by explorer Alvise Gritti, each scent is crafted in Italy using exceptional ingredients. The result - refined, expressive perfumes that balance timeless luxury with a distinctive contemporary edge.
+    </p>
+    <a href="#" style="display:inline-block; margin-top:25px; border:1px solid #bbb; padding:8px 20px; font-size:10px; letter-spacing:2px; text-decoration:none; color:#111;">SHOP NOW</a>
+  </div>
+
+  <div style="flex:1; min-width:300px;">
+    <img src="images/chantily.webp"width:100%; height:550px; object-fit:cover;">
+  </div>
+
+</section>
+
+
+<!-- CLEAN FINAL CODE - Just copy paste -->
+<div style="width:100%; height:90vh; overflow:hidden; background:#000;">
+  <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+    <source src="video/Screen Recording 2026-09-23 101057.mp4"video/mp4">
+  </video>
+</div>
+
+<!-- 3 WHITE BOX - BLACK TEXT -->
+<section class="w-full bg-[#fdfaf7] py-16 md:py-20">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+    <!-- Box 1 -->
+    <div class="bg-white p-8 md:p-10 text-center border border-[#e5e5e5]">
+      <div class="text-[14px] tracking-[3px] mb-6 text-black">★★★★★</div>
+      <p class="text-[11.5px] leading-[22px] text-black  min-h-[140px]">
+        They say good things come to those who are willing to wait and so it was worth the wait!
+        They are quick with deliveries. They got me hooked ever since. Support the house that always
+        encourages to explore among niche collections. Lovely!
+      </p>
+      <p class="mt-8 text-[11px] font-semibold tracking-[1px] text-black">Mayank R.</p>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="bg-white p-8 md:p-10 text-center border border-[#e5e5e5]">
+      <div class="text-[14px] tracking-[3px] mb-6 text-black">★★★★★</div>
+      <p class="text-[11.5px] leading-[22px] text-black  min-h-[140px]">
+        I've been buying fragrances from Scentido for a while now. I love their collection and they
+        often have discounts and offers. I appreciate that they have samples available to help you
+        make a decision. I'm so happy to have Scentido to cater to my niche fragrance needs. They
+        carry brands like Nishane, which I'm a huge fan of. Also, the staff at their store happens
+        to really know their stuff and are very friendly and I love it.
+      </p>
+      <p class="mt-8 text-[11px] font-semibold tracking-[1px] text-black">Dr. Suchismita Sarkar</p>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="bg-white p-8 md:p-10 text-center border border-[#e5e5e5]">
+      <div class="text-[14px] tracking-[3px] mb-6 text-black">★★★★★</div>
+      <p class="text-[11.5px] leading-[22px] text-black  min-h-[140px]">
+        Scentido is not just a store, it is a place to immerse yourself into the beautiful world of
+        fragrances and experience. My personal experience has been great. From exploring and trying
+        out some really good fragrances to learning about notes and families. Every time I have
+        received my orders it has been an experience in itself. The packaging is so good.
+      </p>
+      <p class="mt-8 text-[11px] font-semibold tracking-[1px] text-black">Jashanpreet S.</p>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<!-- MUMBAI STORE BANNER -->
+<section class="w-full relative overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="relative w-full h-[380px] md:h-[600px]">
+    <img
+      src="images/unnamed.jpg"
+      alt="Mumbai - Phoenix Palladium Mall"
+      class="w-full h-full object-cover"
+    >
+
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <!-- Center Content -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+      <h2 class="text-white text-[22px] md:text-[38px] lg:text-[42px] tracking-[2px] md:tracking-[4px] font-light mb-6"
+          style="font-family: 'Cormorant Garamond', serif;">
+        MUMBAI - PHOENIX, PALLADIUM MALL
+      </h2>
+
+      <a href="images/unnamed.jpg"
+         target="_blank"
+         class="bg-[#4a6a82] hover:bg-[#3d5a70] text-white text-[10px] md:text-[12px] tracking-[3px] px-8 py-3 transition-all duration-300">
+        GET DIRECTION
+      </a>
+
+    </div>
+  </div>
+
+</section>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+ 
+<footer style="background:#fbf9f6; padding:60px 40px; font-family:sans-serif;">
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:40px; max-width:1400px; margin:auto;">
+
+    <div><h4 style="letter-spacing:3px; font-size:12px; margin-bottom:20px;">LEGAL</h4>
+    <p style="font-size:13px; line-height:30px;">Privacy Policy<br>Terms & Conditions<br>Cookie Policy<br>Authenticity Policy<br>Refund policy</p></div>
+
+    <div><h4 style="letter-spacing:3px; font-size:12px; margin-bottom:20px;">CUSTOMER SERVICE</h4>
+    <p style="font-size:13px; line-height:30px;">Contact Us<br>My account<br>FAQ'S<br>Store Locator</p></div>
+
+    <div><h4 style="letter-spacing:3px; font-size:12px; margin-bottom:20px;">ABOUT US</h4>
+    <p style="font-size:13px; line-height:30px;">Our Story<br>Careers<br>Press</p></div>
+
+    <div><h4 style="letter-spacing:2px; font-size:12px; margin-bottom:20px;">SUBSCRIBE TO GET 5% OFF ON YOUR FIRST ORDER</h4>
+    <div style="border-bottom:1px solid black; display:flex; justify-content:space-between; padding-bottom:8px;">
+      <input placeholder="Enter your email" style="border:none; background:transparent; outline:none; font-size:13px;"><span style="font-size:18px;">✉</span>
+    </div>
+    <h4 style="letter-spacing:3px; font-size:12px; margin-top:30px;">EXPLORE MORE</h4>
+    </div>
+
+  </div>
+</footer>
